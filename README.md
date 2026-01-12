@@ -36,3 +36,12 @@ Wordpress-Deployment-with-Terraform/
       └─ outputs.tf         # public_ip, instance_id
 ```
 
+#### Deployment
+
+     terraform init
+     terraform plan
+     terraform apply
+
+---
+
+<img width="1551" height="894" alt="image" src="https://github.com/user-attachments/assets/6c3010cb-401f-473e-bb0c-4ac63d2f7eef" />
