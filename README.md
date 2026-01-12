@@ -1,1 +1,1 @@
-# EC21 Wordpress-Deployment
+# EC2 Wordpress-Deployment
