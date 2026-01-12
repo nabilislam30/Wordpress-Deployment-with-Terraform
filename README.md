@@ -1,7 +1,7 @@
 # EC2 Wordpress-Deployment
 
 ## Introduction
-The project presents an end-to-end deployment of wordpress on AWS using Terraform as the primary Infrastructure-as-Code tool. The focus was to design, provision, and automate a fully functional environment covering networking, compute, security, and application bootstrapping through a modular Terraform architecture.
+This project aims to deploy a WordPress application on AWS using Terraform as the primary Infrastructure-as-Code tool. It focuses on building and automating a complete cloud environment, covering networking, compute resources, security controls, and application bootstrapping through a modular Terraform architecture.
 
 The deployment provisions:
 - Custom VPC.
@@ -12,7 +12,7 @@ The deployment provisions:
 - using user_data script to automate wordpress installation.
 - Well structured repository with modules, variables, terraform.tfvars and .gitignore
 
-The project itself takes the foundational knowledge of AWS networking and is implementing throughout from compute resources to automation and end-to-end deployment.
+The project itself takes the foundational knowledge of what I learnt from AWS and is implementing it through the end-to-end deployment.
 
 ---
 ## Folder & File Structure
