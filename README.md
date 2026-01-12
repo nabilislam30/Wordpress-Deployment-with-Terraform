@@ -1,1 +1,1 @@
-# Wordpress-Deployment-with-Terraform
+# EC21 Wordpress-Deployment
