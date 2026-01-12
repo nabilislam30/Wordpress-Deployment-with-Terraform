@@ -1,1 +1,38 @@
 # EC2 Wordpress-Deployment
+
+## Introduction
+The project presents an end-to-end deployment of wordpress on AWS using Terraform as the primary Infrastructure-as-Code tool. The focus was to design, provision, and automate a fully functional environment covering networking, compute, security, and application bootstrapping through a modular Terraform architecture.
+
+The deployment provisions:
+- Custom VPC.
+- A public subnet.
+- Internet Gateway with routing.
+- Modular security Group design.
+- EC2 instance deployed via a resuable module.
+- using user_data script to automate wordpress installation.
+- Well structured repository with modules, variables, terraform.tfvars and .gitignore
+
+The project itself takes the foundational knowledge of AWS networking and is implementing throughout from compute resources to automation and end-to-end deployment.
+
+---
+## Folder & File Structure
+
+```text
+Wordpress-Deployment-with-Terraform/
+├─ main.tf                # wires modules together (VPC -> EC2)            
+├─ variables.tf           # root inputs (ami_id, instance_type, key_name, my_ip)                  
+├─ outputs.tf             # public IP + WordPress URL outputs          
+├─ provider.tf            # AWS provider + required_providers  
+├─ user_data.sh           # Ubuntu bootstrap script (WordPress install)
+├─ terraform.tfvars       # your values (NOT committed)    
+└─ modules/
+   ├─ vpc/
+   │  ├─ main.tf            # VPC, subnet, IGW, route table, SG
+   │  ├─ variables.tf       # module inputs (my_ip)
+   │  └─ outputs.tf         # vpc_id, public_subnet_id, security_group_id
+   └─ ec2/
+      ├─ main.tf            # EC2 instance resource
+      ├─ variables.tf       # module inputs
+      └─ outputs.tf         # public_ip, instance_id
+```
+
